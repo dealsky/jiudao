@@ -1,0 +1,41 @@
+/* components/player/player.wxss */
+
+.player {
+  position: relative;
+  display: inline-block;
+  width: 420rpx;
+  height: 420rpx;
+}
+
+.player .cover {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0px 2px 18px 0px rgba(109, 109, 109, 0.15);
+}
+
+.player .tool {
+  position: absolute;
+  top: 148rpx;
+  left: 148rpx;
+  width: 124rpx;
+  height: 124rpx;
+}
+
+.player .cover.play, .player .cover.pause {
+  animation: music-rotate 24 * 60 * 60 linear infinite;
+}
+
+.player .cover.pause {
+  animation-play-state: paused;
+}
+
+@keyframes music-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

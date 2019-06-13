@@ -1,0 +1,78 @@
+/* components/journal/journal.wxss */
+
+.journal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.journal .journal-top-wrapper {
+  height: 100rpx;
+}
+
+.journal .display {
+  position: relative;
+  height: 500rpx;
+}
+
+.journal .display .image {
+  width: 100%;
+  height: 100%;
+}
+
+.journal .display .player-wrapper {
+  padding-top: 46rpx;
+  text-align: center;
+}
+
+.journal .display .title {
+  position: absolute;
+  top: 441rpx;
+  left: 30rpx;
+  width: 46rpx;
+  height: 142rpx;
+}
+
+.journal .detail {
+  margin: 119rpx auto 0 auto;
+  width: 558rpx;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  color: #0f0f0f;
+}
+
+.journal .control {
+  position: absolute;
+  margin: 0 auto;
+  left: 78rpx;
+  bottom: 41rpx;
+  width: 588rpx;
+  height: 80rpx;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.journal .control .text {
+  line-height: 80rpx;
+  font-size: 24rpx;
+}
+
+.journal .control .icon {
+  position: absolute;
+  width: 23rpx;
+  height: 34rpx;
+  top: 23rpx;
+}
+
+.journal .control .icon.disabled {
+  opacity: 0.1;
+}
+
+.journal .control .prev {
+  left: 20rpx;
+}
+
+.journal .control .next {
+  right: 20rpx;
+}

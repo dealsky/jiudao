@@ -1,0 +1,19 @@
+/* components/like/like.wxss */
+
+.like {
+  line-height: 1;
+}
+
+.like .icon {
+  vertical-align: top;
+  margin-top: 8rpx;
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.like .count {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18rpx;
+  color: #bbb;
+}

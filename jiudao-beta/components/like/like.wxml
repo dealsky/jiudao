@@ -1,0 +1,8 @@
+<!--components/like/like.wxml-->
+
+<view class="like" bindtap='toogleLike'>
+  <image wx:if="{{ !status }}" class="icon" src='/img/common/like.png'></image>
+  <image wx:else class="icon" src='/img/common/like-fill.png'></image>
+  <text class="count">{{ count }}</text>
+</view>
+

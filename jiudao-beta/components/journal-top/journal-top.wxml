@@ -1,0 +1,24 @@
+<!-- 期刊头部区域组件 -->
+
+<view class="journal-top">
+  <view class="title">
+    <view class="number">
+      <view class="symbal">No.</view>
+      <view class="value">{{ info.index }}</view>
+    </view>
+    <view class="line"></view>
+    <view class="date">
+      <text class="month">{{ info.month }}月</text>
+      <text class="year">{{ info.year }}</text>
+    </view>
+  </view>
+
+  <view class="like-wrapper">
+    <like count="{{ info.fav_nums }}" status="{{ info.like_status }}" bind:toogle="toogleLike"></like>
+  </view>
+
+  <view class='share-wrapper'>
+    <share></share>
+  </view>
+</view>
+ 

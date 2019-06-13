@@ -1,0 +1,6 @@
+<!--components/share/share.wxml-->
+
+<view class="share">
+  <button open-type='share'></button>
+  <image src='/img/common/share.png'></image>
+</view>

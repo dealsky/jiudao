@@ -1,0 +1,6 @@
+<!-- 音乐播放器组件 -->
+
+<view class="player">
+  <image class="cover {{ playStatus }}" src="{{ cover }}"></image>
+  <image wx:if="{{ playStatus }}" class="tool" src='/img/music/{{ playStatus }}.png' bindtap='tooglePlay'></image>
+</view>

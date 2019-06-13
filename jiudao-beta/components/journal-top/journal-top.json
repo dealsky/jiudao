@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "like": "/components/like/like",
+    "share": "/components/share/share"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "journal-top": "/components/journal-top/journal-top",
+    "player": "/components/player/player"
+  }
+}

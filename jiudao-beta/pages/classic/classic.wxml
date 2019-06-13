@@ -1,0 +1,5 @@
+<!--pages/classic/classic.wxml-->
+
+<view>
+  <journal journal="{{ journal }}" control="{{ true }}" prev="{{ prev }}" next="{{ next }}" bind:prev="prevJournal" bind:next="nextJournal"></journal>
+</view>

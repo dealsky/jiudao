@@ -1,0 +1,22 @@
+<!-- 期刊组件 -->
+
+<view class="journal">
+  <view class="journal-top-wrapper">
+    <journal-top info="{{ journalTopInfo }}" bind:tooglelike="toogleLike"></journal-top>
+  </view>
+  <view class="display">
+    <block wx:if="{{ category === 'music' }}">
+      <view class="player-wrapper">
+        <player url="{{ journal.url }}" cover="{{ journal.image }}"></player>
+      </view>
+    </block>
+    <image wx:else class="image" src="{{ journal.image }}"></image>
+    <image wx:if="{{ category }}" class="title" src="/img/category/{{ category }}.png"></image>
+  </view>
+  <view class="detail">{{ journal.content }}</view>
+  <view wx:if="{{ control }}" class="control">
+    <image class="icon prev {{ !next ? 'disabled' : '' }}" src='/img/common/prev.png' data-status="next" bindtap='clickControl'></image>
+    <image class="icon next {{ !prev ? 'disabled' : '' }}" src='/img/common/next.png' data-status="prev" bindtap='clickControl'></image>
+    <text class="text">{{ journal.title }}</text>
+  </view>
+</view>
