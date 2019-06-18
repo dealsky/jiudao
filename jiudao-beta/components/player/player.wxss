@@ -23,7 +23,7 @@
 }
 
 .player .cover.play, .player .cover.pause {
-  animation: music-rotate 24 * 60 * 60 linear infinite;
+  animation: music-rotate 30s linear infinite;
 }
 
 .player .cover.pause {

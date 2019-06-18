@@ -1,66 +1,28 @@
 // pages/my/my.js
-Page({
 
-  /**
-   * 页面的初始数据
-   */
+const userInfoUtil = require('../../utils/userinfo.js')
+
+Page({
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function() {
+    this.getUserInfo()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getUserInfo: function() {
+    userInfoUtil.getUserInfo().then((userInfo) => {
+      this.normalizaUserInfo(userInfo)
+    }).catch((message) => {
+      console.log(message)
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  authorizedSuccess: function(e) {
+    this.normalizaUserInfo(e.detail.userInfo)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  normalizaUserInfo: function(userInfo) {
+    this.setData({
+      avatar: userInfo.avatarUrl,
+      nickname: userInfo.nickName
+    })
   }
 })
